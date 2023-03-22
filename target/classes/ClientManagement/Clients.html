@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>HR | Clients</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Custom fonts for this template -->
+<link th:href="@{~/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+<link
+href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{~/css/sb-admin-2.min.css}" rel="stylesheet">
+
+</head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+			<!-- Main Content -->
+			<div id="content">
+				<div class="container-fluid">
+					<!-- Page Heading -->
+					<h1 class="h3 mb-2 text-gray-800">Clients</h1>
+					<a th:href = "@{/clients/new}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+								class="fas fa-download fa-sm text-white-50"></i> Add Client</a>
+					<p class="mb-4">Add a Single Client at a time.</p>
+
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary">All Projects</h6>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+									<thead>
+										<tr>
+											<th> ID </th>
+											<th> Name </th>
+											<th> Phone </th>
+											<th> Image </th>
+											<th> Project </th>
+											<th> Manager </th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										<tr th:each = "client: ${client}">
+											<td th:text = "${client.id}"></td>
+											<td th:text = "${client.name}"></td>
+											<td th:text = "${client.phone}"></td>
+											<td>
+												<img th:if="${client.base64Image != null}" th:src="@{'data:image/png;base64,' + ${client.base64Image}}" 
+													width = "70px"
+													height = "70px" />
+											</td>
+											<td>
+												<ul>
+												<li th:each="project : ${client.project}" th:text="${project.projectname}"></li>
+												</ul>
+											</td>
+											<td th:text="${client.clientManager}"></td>
+											<td>
+												<a th:href = "@{/clients/edit/{id}(id=${client.id})}" data-toggle="modal" data-target="#ActionModal"class="badge badge-primary">Add Project</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

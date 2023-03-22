@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>HR | Add Projects</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Custom fonts for this template -->
+	<link th:href="@{~/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+	<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link th:href="@{~/css/sb-admin-2.min.css}" rel="stylesheet">	
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+			<!-- Main Content -->
+			<div id="content">
+				<div class="container-fluid">
+					<div class="card o-hidden border-0 shadow-lg my-5">
+						<div class="card-body p-0">
+							<!-- Nested Row within Card Body -->
+							<div class="row">
+								<div class="col-lg-6 d-none d-lg-block ">
+									<img class="img-profile rounded-circle" th:src="@{~/img/login.jpg}">
+								</div>
+								<div class="col-lg-6">
+									<div class="p-5">
+										<div class="text-center">
+											<h1 class="h4 text-gray-900 mb-2">Add Client</h1>
+											<p class="mb-4">Client can be Added Later</p>
+										</div>
+										<form th:action="@{/clients/new}" th:object = "${client}" method="POST" enctype="multipart/form-data" class="user">				
+											<div class ="form-group">
+												<label> Client Name </label>
+												<input
+												type = "text"
+												name = "name"
+												th:field = "*{name}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Enter Client Name" 
+												/>
+											</div>
+											
+											<div class ="form-group">
+												<label> Address </label>
+												<input
+												type = "textarea"
+												name = "address"
+												th:field = "*{address}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Enter Address" 
+												/>
+											</div>
+											
+											<div class ="form-group">
+												<label> Phone </label>
+												<input
+												type = "text"
+												name = "phone"
+												th:field = "*{phone}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Enter Number" 
+												/>
+											</div>
+
+											<div class="form-group">
+												<label>Add Project</label>
+												<select th:field="*{project}">
+													<option class="collapse-item" th:each="project : ${project}" th:value="${project.projectid}" th:text="${project.projectname}"></option>
+												</select>
+											</div>
+
+											<div class ="form-group">
+												<label> Profile Image </label>
+												<input
+												type = "file"
+												name = "imageData"
+												th:field = "*{imageData}"
+												class="btn btn-primary btn-icon-split"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Upload Image" 
+												/>
+											</div>
+											
+											<div class ="form-group">
+												<label> GSI </label>
+												<input
+												type = "number"
+												name = "gsi"
+												th:field = "*{gsi}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Enter GSI Number" 
+												/>
+											</div>
+
+											<div class ="form-group">
+												<label> C/N </label>
+												<input
+												type = "number"
+												name = "cin"
+												th:field = "*{cin}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Enter C/N Number" 
+												/>
+											</div>
+
+											<div class ="form-group">
+												<label> Manager </label>
+												<input
+												type = "text"
+												name = "manager"
+												th:field = "*{clientManager}"
+												class="form-control form-control-user"
+												id="exampleInputEmail"
+												aria-describedby="emailHelp"
+												placeholder="Select Manager" 
+												/>
+											</div>
+											<div class="btn btn-primary btn-user btn-block">
+												<button type="submit" class = "btn btn-primary btn-user btn-block">
+													Submit
+												</button>
+											</div>
+										</form>
+										<hr>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
