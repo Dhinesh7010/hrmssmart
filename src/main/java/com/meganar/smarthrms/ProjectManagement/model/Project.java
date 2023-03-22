@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import com.meganar.smarthrms.ClientManagement.Model.Client;
+
 @Getter @Setter @NoArgsConstructor
 @Entity(name="project")
 public class Project {
@@ -26,7 +28,7 @@ public class Project {
     @Column(name = "status", columnDefinition = "boolean default false")
     private Boolean status;
 
-    //@ManyToOne
-    //private Client client;
+    @ManyToOne
+    private Client client;
 
 }

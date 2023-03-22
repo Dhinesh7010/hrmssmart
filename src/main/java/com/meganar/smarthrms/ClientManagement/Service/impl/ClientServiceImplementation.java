@@ -1,12 +1,12 @@
-package com.example.hr.service.impl;
+package com.meganar.smarthrms.ClientManagement.Service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.hr.model.Client;
-import com.example.hr.repository.ClientRepository;
-import com.example.hr.service.ClientService;
+import com.meganar.smarthrms.ClientManagement.Model.Client;
+import com.meganar.smarthrms.ClientManagement.Repository.ClientRepository;
+import com.meganar.smarthrms.ClientManagement.Service.ClientService;
 
 @Service
 public class ClientServiceImplementation implements ClientService{

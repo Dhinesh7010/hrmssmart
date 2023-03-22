@@ -4,6 +4,7 @@ com\meganar\smarthrms\StaffBenefitsandHolidaysManagement\controller\AddHolidayLi
 com\meganar\smarthrms\UserAccountAuthentication\RoleManagement\controller\AddRolePage.class
 com\meganar\smarthrms\ProjectManagement\web\ProjectController.class
 com\meganar\smarthrms\InternalMobility\dao\EmployeeDaoHibernateImpl.class
+com\meganar\smarthrms\ClientManagement\Service\ClientService.class
 com\meganar\smarthrms\LeaveManagement\controller\RaiseLeaveRequest.class
 com\meganar\smarthrms\UserAccountAuthentication\service\CustomUserDetailsService.class
 com\meganar\smarthrms\StaffProfileManagement\controller\hr\AddStaffDetailsPage.class
@@ -15,12 +16,14 @@ com\meganar\smarthrms\InternalMobility\service\NewOpeningService.class
 com\meganar\smarthrms\InternalMobility\dao\NewOpeningDao.class
 com\meganar\smarthrms\InternalMobility\service\NewOpeningServiceImpl.class
 com\meganar\smarthrms\ProjectManagement\service\impl\ProjectServiceImplementation.class
+com\meganar\smarthrms\ClientManagement\Web\ClientController.class
 com\meganar\smarthrms\InternalMobility\controller\EmployeeRestController.class
 com\meganar\smarthrms\ExitManagement\controller\AddResignation.class
 com\meganar\smarthrms\StaffBenefitsandHolidaysManagement\controller\AddStaffBenefitsDetails.class
 com\meganar\smarthrms\UserAccountAuthentication\configuration\SecurityConfiguration.class
 com\meganar\smarthrms\UserAccountAuthentication\controller\LoginPage.class
 com\meganar\smarthrms\UserAccountAuthentication\RoleManagement\controller\ViewRoleListPage.class
+com\meganar\smarthrms\ClientManagement\Service\impl\ClientServiceImplementation.class
 com\meganar\smarthrms\InternalMobility\controller\NewOpeningController.class
 com\meganar\smarthrms\InternalMobility\dao\EmployeeDao.class
 com\meganar\smarthrms\ProjectManagement\repository\ProjectRepository.class
@@ -32,12 +35,14 @@ com\meganar\smarthrms\UserAccountAuthentication\controller\Dashboard.class
 com\meganar\smarthrms\UserAccountAuthentication\controller\ForgotPassword.class
 com\meganar\smarthrms\UserAccountAuthentication\repository\UserRepository.class
 com\meganar\smarthrms\ProjectManagement\model\Project.class
+com\meganar\smarthrms\ClientManagement\Model\Client.class
 com\meganar\smarthrms\LeaveManagement\controller\AddLeaveCountforOrganization.class
 com\meganar\smarthrms\ProjectManagement\service\ProjectService.class
 com\meganar\smarthrms\LeaveManagement\controller\LeaveListCountView.class
 com\meganar\smarthrms\InternalMobility\dao\NewOpeningHibernateImpl.class
 com\meganar\smarthrms\ExitManagement\controller\ListOfPendingApprovals.class
 com\meganar\smarthrms\TrainingPlanning\controller\ViewTrainingDetails.class
+com\meganar\smarthrms\ClientManagement\Repository\ClientRepository.class
 com\meganar\smarthrms\InternalMobility\model\Employee.class
 com\meganar\smarthrms\HibernateSpringbootApplication.class
 com\meganar\smarthrms\InternalMobility\controller\ViewOpening.class

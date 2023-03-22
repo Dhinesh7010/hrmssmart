@@ -1,4 +1,4 @@
-package com.meganar.smarthrms.Model;
+package com.meganar.smarthrms.ClientManagement.Model;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,6 +9,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import com.meganar.smarthrms.ProjectManagement.model.Project;
 
 @Entity
 @Getter @Setter @NoArgsConstructor

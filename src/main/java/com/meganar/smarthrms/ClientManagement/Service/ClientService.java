@@ -1,8 +1,8 @@
-package com.example.hr.service;
+package com.meganar.smarthrms.ClientManagement.Service;
 
 import java.util.List;
 
-import com.example.hr.model.Client;
+import com.meganar.smarthrms.ClientManagement.Model.Client;
 
 public interface ClientService {
     List<Client> getAllClients();

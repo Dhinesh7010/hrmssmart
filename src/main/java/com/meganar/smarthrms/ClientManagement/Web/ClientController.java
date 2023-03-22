@@ -1,4 +1,4 @@
-package com.example.hr.web;
+package com.meganar.smarthrms.ClientManagement.Web;
 
 import java.io.IOException;
 import java.util.Base64;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.example.hr.model.Client;
-import com.example.hr.model.Project;
-import com.example.hr.service.ClientService;
-import com.example.hr.service.ProjectService;
+import com.meganar.smarthrms.ClientManagement.Model.Client;
+import com.meganar.smarthrms.ProjectManagement.model.Project;
+import com.meganar.smarthrms.ClientManagement.Service.ClientService;
+import com.meganar.smarthrms.ProjectManagement.service.ProjectService;
 
 @Controller
 @RequestMapping("/clients")
@@ -42,7 +42,7 @@ public class ClientController {
             client.setBase64Image(base64Image);
         }
         model.addAttribute("client", clients);
-        return "clientsdir/Clients";
+        return "ClientManagement/Clients";
     }
 
     @GetMapping("/new")
@@ -51,7 +51,7 @@ public class ClientController {
         List<Project> project = projectService.getAllProjects();
         model.addAttribute("client", client);
         model.addAttribute("project", project);
-        return "clientsdir/AddClient";
+        return "ClientManagement/AddClient";
     }
 
     @PostMapping("/new")
@@ -68,7 +68,7 @@ public class ClientController {
         List<Project> project = projectService.getAllProjects();
         model.addAttribute("client", clientService.getClientById(id));
         model.addAttribute("project", project);
-        return "clientsdir/EditClient";
+        return "ClientManagement/EditClient";
     }
 
     @PostMapping("/edit/{id}")
