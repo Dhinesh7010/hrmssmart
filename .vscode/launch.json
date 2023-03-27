@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HibernateSpringbootApplication<Smarthrms>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.meganar.smarthrms.HibernateSpringbootApplication",
+            "projectName": "Smarthrms",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
